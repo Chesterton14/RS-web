@@ -1,0 +1,361 @@
+/*=======reset========*/
+body {
+    font-size: 12px;
+    font-family: "Microsoft YaHei UI";
+    color: #666;
+}
+
+a {
+    text-decoration: none;
+    color: #666;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #666;
+}
+/*自定义字体图标*/
+@font-face {
+    font-family: 'wjs';
+    src:
+            url(../fonts/MiFie-Web-Font.eot) format("embedded-opentype"),
+            url(../fonts/MiFie-Web-Font.svg) format("svg"),
+            url(../fonts/MiFie-Web-Font.ttf) format("truetype"),
+            url(../fonts/MiFie-Web-Font.woff) format("woff");
+}
+/*使用自定义图标*/
+.wjs-icon{
+    font-family: wjs;
+}
+.wjs-icon-phone::before{
+    content: '\e908';
+}
+.wjs-icon-logo::before{
+    content: '\e920';
+}
+.wjs-icon-name::before{
+    content: '\e93e';
+}
+.wjs-icon-doller::before{
+    content: '\e903';
+}
+.wjs-icon-clock::before{
+    content: '\e906';
+}
+.wjs-icon-video::before{
+    content: '\e905';
+}
+
+/*=======model========*/
+.wjs-topBar {
+
+    border-bottom: 1px solid #ccc;
+}
+
+.wjs-topBar > .container > .row > div {
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+
+.wjs-topBar > .container > .row > div + div {
+    border-left: 1px solid #ccc;
+}
+
+.wjs-app {
+    display: block;
+}
+
+.wjs-app img {
+    display: none;
+}
+
+.wjs-app:hover img {
+    display: block;
+    border: 1px solid #ccc;
+    border-top: none;
+    position: absolute;
+    margin-left: 50%;
+    top: 40px;
+    left: -60px;
+    z-index: 1000;
+}
+.row div:last-child a{
+    margin: 0 5px;
+}
+/*覆盖bootstrap样式*/
+.wjs-nav {
+    border:none;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 0;
+    font-size: 15px;
+}
+.wjs-nav .navbar-brand {
+    color: #777;
+    height: 80px;
+    line-height: 50px;
+}
+.wjs-nav .navbar-brand:hover,
+.wjs-nav .navbar-brand:focus {
+    color: #5e5e5e;
+    background-color: transparent;
+}
+.wjs-nav .navbar-text {
+    color: #777;
+}
+.wjs-nav .navbar-nav > li > a {
+    color: #777;
+    height: 80px;
+    line-height: 50px;
+}
+.wjs-nav .navbar-nav > li > a:hover,
+.wjs-nav .navbar-nav > li > a:focus {
+    color: #777;
+    background-color: transparent;
+    border-bottom: 3px solid #e92322;
+}
+.wjs-nav .navbar-nav > .active > a,
+.wjs-nav .navbar-nav > .active > a:hover,
+.wjs-nav .navbar-nav > .active > a:focus {
+    color: #e92322;
+
+}
+.wjs-nav .navbar-nav > .disabled > a,
+.wjs-nav .navbar-nav > .disabled > a:hover,
+.wjs-nav .navbar-nav > .disabled > a:focus {
+    color: #ccc;
+    background-color: transparent;
+}
+.wjs-nav .navbar-toggle {
+    border-color: #ddd;
+    margin-top: 23px;
+}
+.wjs-nav .navbar-toggle:hover,
+.wjs-nav .navbar-toggle:focus {
+    background-color: #ddd;
+}
+.wjs-nav .navbar-toggle .icon-bar {
+    background-color: #888;
+}
+.wjs-nav .navbar-collapse,
+.wjs-nav .navbar-form {
+    border-color: #e7e7e7;
+}
+.wjs-nav .navbar-nav > .open > a,
+.wjs-nav .navbar-nav > .open > a:hover,
+.wjs-nav .navbar-nav > .open > a:focus {
+    color: #555;
+    background-color: #e7e7e7;
+}
+@media (max-width: 767px) {
+    .wjs-nav .navbar-nav .open .dropdown-menu > li > a {
+        color: #777;
+    }
+    .wjs-nav .navbar-nav .open .dropdown-menu > li > a:hover,
+    .wjs-nav .navbar-nav .open .dropdown-menu > li > a:focus {
+        color: #333;
+        background-color: transparent;
+    }
+    .wjs-nav .navbar-nav .open .dropdown-menu > .active > a,
+    .wjs-nav .navbar-nav .open .dropdown-menu > .active > a:hover,
+    .wjs-nav .navbar-nav .open .dropdown-menu > .active > a:focus {
+        color: #555;
+        background-color: #e7e7e7;
+    }
+    .wjs-nav .navbar-nav .open .dropdown-menu > .disabled > a,
+    .wjs-nav .navbar-nav .open .dropdown-menu > .disabled > a:hover,
+    .wjs-nav .navbar-nav .open .dropdown-menu > .disabled > a:focus {
+        color: #ccc;
+        background-color: transparent;
+    }
+}
+.wjs-nav .navbar-link {
+    color: #777;
+}
+.wjs-nav .navbar-link:hover {
+    color: #333;
+}
+.wjs-nav .btn-link {
+    color: #777;
+}
+.wjs-nav .btn-link:hover,
+.wjs-nav .btn-link:focus {
+    color: #333;
+}
+.wjs-nav .btn-link[disabled]:hover,
+fieldset[disabled] .wjs-nav .btn-link:hover,
+.wjs-nav .btn-link[disabled]:focus,
+fieldset[disabled] .wjs-nav .btn-link:focus {
+    color: #ccc;
+}
+.wjs-icon-logo{
+    font-size: 50px;
+    color: #e92322;
+    vertical-align: middle;
+}
+.wjs-icon-name{
+    font-size: 36px;
+    color: #333;
+    vertical-align: middle;
+}
+/*轮播图*/
+.wjs-banner .pc-img-box{
+    display: block ;
+    height: 400px ;
+    width: 100% ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.wjs-banner .m-img-box{
+    display:block ;
+    width: 100%;
+}
+.wjs-banner .m-img-box img{
+    display:block ;
+    width: 100%;
+}
+/*信息模块*/
+.wjs-info{
+    border-bottom: 1px solid  #ccc;
+    padding: 15px 0;
+}
+.wjs-info > .container{
+    width: 900px;
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    .wjs-info > .container{
+        width: 750px;
+    }
+}
+.wjs-info > .container >  div > a{
+    display: block;
+    padding: 15px 0;
+}
+.wjs-info > .container >  div > a:hover{
+    color: #e92322;
+}
+.wjs-info > .container >  div > a span{
+    font-size: 30px;
+}
+/*预约模块*/
+.wjs-book{
+    padding: 40px 0;
+    border-bottom: 1px solid #ccc;
+}
+.wjs-book > .container{
+    width: 900px;
+    font-size: 15px;
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    .wjs-book > .container{
+        width: 750px;
+    }
+}
+@media screen and (max-width: 768px){
+    .wjs-book > .container{
+        width: 100%;
+    }
+}
+.wjs-book > .container > div >a{
+    color:#e92322 ;
+    border-bottom: 1px dashed #e92322;
+}
+/*产品区块*/
+.wjs-product{
+    padding: 20px 0;
+    background-color: #f5f5f5;
+}
+.wjs-product .nav-tabs-parent{
+    width: 100%;
+    overflow: hidden;
+}
+.wjs-product .nav-tabs  {
+    border-bottom: 1px solid #ddd;
+}
+.wjs-product .nav-tabs  > li {
+    float: left;
+    margin-left: 20px;
+    margin-bottom: 0;
+}
+.wjs-product .nav-tabs  > li > a {
+    margin-right: 2px;
+    line-height: 1.42857143;
+    border: none;
+
+}
+.wjs-product .nav-tabs  > li > a:hover {
+    background-color: #f5f5f5;
+}
+.wjs-product .nav-tabs  > li.active > a,
+.wjs-product .nav-tabs  > li.active > a:hover,
+.wjs-product .nav-tabs  > li.active > a:focus {
+    color: #555;
+    cursor: default;
+    background-color: #f5f5f5;
+    border: none;
+    border-bottom: 3px solid #e92322;
+}
+.wjs-product .nav-tabs .nav-justified {
+    width: 100%;
+    border-bottom: 0;
+}
+.wjs-product .nav-tabs .nav-justified > li {
+    float: none;
+}
+.wjs-product .nav-tabs .nav-justified > li > a {
+    margin-bottom: 5px;
+    text-align: center;
+}
+.wjs-product .nav-tabs .nav-justified > .dropdown .dropdown-menu {
+    top: auto;
+    left: auto;
+}
+@media (min-width: 768px) {
+    .wjs-product .nav-tabs .nav-justified > li {
+        display: table-cell;
+        width: 1%;
+    }
+    .wjs-product .nav-tabs .nav-justified > li > a {
+        margin-bottom: 0;
+    }
+}
+.wjs-product .nav-tabs .nav-justified > li > a {
+    margin-right: 0;
+    border-radius: 4px;
+}
+.wjs-product .nav-tabs .nav-justified > .active > a,
+.wjs-product .nav-tabs .nav-justified > .active > a:hover,
+.wjs-product .nav-tabs .nav-justified > .active > a:focus {
+    border: 1px solid #ddd;
+}
+@media (min-width: 768px) {
+    .wjs-product .nav-tabs .nav-justified > li > a {
+        border-bottom: 1px solid #ddd;
+        border-radius: 4px 4px 0 0;
+    }
+    .wjs-product .nav-tabs .nav-justified > .active > a,
+    .wjs-product .nav-tabs .nav-justified > .active > a:hover,
+    .wjs-product .nav-tabs .nav-justified > .active > a:focus {
+        border-bottom-color: #fff;
+    }
+}
+.product-box{
+    display:block;
+    width: 100%;
+    height: 150px;
+    background-color: white;
+    box-shadow: 3px 3px 5px #d8d8d8;
+    margin-top: 20px;
+}
+.product-box.active{
+    background-color: #e92322;
+}
+.pro-left{
+    overflow: hidden;
+}
+.pro-right{
+    float: right;
+    width: 80px;
+    height: 150px;
+}
